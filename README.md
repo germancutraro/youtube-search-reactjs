@@ -2,6 +2,8 @@
 
 ▶️ A very humble search engine and YouTube video player, made with React.js 🎥
 
+<img src="youtube-clone.gif" alt="germancutraro-youtube-app" />
+
 ## Instalation
 
 Install all dependencies
@@ -14,6 +16,14 @@ Run app
 
 ```
 npm start
+```
+
+**Create an API KEY**, then create a `key.js` file inside de `src` folder, and write this:
+
+```javascript
+const API_KEY = 'YOUR_PERSONAL_KEY';
+
+module.exports = API_KEY;  
 ```
 
 ## Built With
