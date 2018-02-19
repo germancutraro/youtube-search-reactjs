@@ -7,9 +7,8 @@ import VideoList from './components/VideoList/video_list';
 import VideoDetail from './components/VideoDetail/video_detail';
 import Nav from './components/Nav/Nav';
 import './App.css';
-
-// Youtube API key
-const API_KEY = 'AIzaSyBWfaxycRYYG7O0IYJx8gQ7NiQKr1du-eo';
+// Personal Key, it would be hidden for you. Get One!
+import API_KEY from './key';
 
 class App extends Component {
   state = {
