@@ -17,8 +17,8 @@ class App extends Component {
     selectedVideo: null
   };
 
-  componentWillMount() {
-    this.searchVideoHandler('Guns and Roses'); // for default will be guns and roses :>
+  componentDidMount() {
+    this.searchVideoHandler('Guns and roses'); // for default will be guns and roses :>
   }
 
   searchVideoHandler = term => YTSearch({key: API_KEY, term}, videos => this.setState({videos, selectedVideo: videos[0]}));
@@ -26,8 +26,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
-        <SearchBar onSearchVideos={ _.debounce(this.searchVideoHandler, 433) } />
+        <Nav> 
+          <SearchBar onSearchVideos={ _.debounce(this.searchVideoHandler, 433) } />
+        </Nav>
+        
         <VideoDetail videos={this.state.selectedVideo} > 
         
         <VideoList 

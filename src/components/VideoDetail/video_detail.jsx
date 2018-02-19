@@ -8,14 +8,13 @@ const VideoDetail = props => {
 
   let videoId = props.videos.id.videoId,
     url = `https://youtube.com/embed/${videoId}`;
-// /width={850} height={479}
-   // Channel Title:  props.videos.snippet.channelTitle
   return (
     <div className="video-detail">
      <div className="video-detail-wrapper">
       <iframe src={url} title={props.videos.title} className="video-player"></iframe> 
-      <h4 className="video-title">{props.videos.snippet.title}</h4>
-      <small>{props.videos.snippet.description}</small>
+      <h4 className="main-video-title">{props.videos.snippet.title}</h4>
+      <small className="main-video-channelTitle">{props.videos.snippet.channelTitle}</small> <br />
+      <small className="main-video-description">{props.videos.snippet.description}</small>
       </div>
       {props.children}
     </div>

@@ -1,13 +1,13 @@
 .search-wrapper {
-  position: absolute;
-  top: 16px; 
-  left: 13%;
+  margin-left: 4.5em;
 } 
 
 .search-bar {
   width: 600px;
   height: 31px;
-  border: 1px solid #ccc;
+  color: #cdcdcd;
+  background-color: #000;
+  border: 1px solid #303030;
   outline: none;
   padding: 10px;
   line-height: 24px;
