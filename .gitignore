@@ -9,6 +9,7 @@
 # production
 /build
 src/key.js
+youtube-clone.gif
 
 # misc
 .DS_Store
