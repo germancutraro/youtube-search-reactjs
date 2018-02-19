@@ -28,15 +28,12 @@ class App extends Component {
         <Nav> 
           <SearchBar onSearchVideos={ _.debounce(this.searchVideoHandler, 433) } />
         </Nav>
-        
         <VideoDetail videos={this.state.selectedVideo} > 
-        
-        <VideoList 
-          videos={this.state.videos} 
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})} 
-        /> 
+          <VideoList 
+            videos={this.state.videos} 
+            onVideoSelect={selectedVideo => this.setState({selectedVideo})} 
+          /> 
         </VideoDetail>
-       
       </div>
     );
   }
