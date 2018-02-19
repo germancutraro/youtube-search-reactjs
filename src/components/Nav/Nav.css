@@ -1,0 +1,15 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px -7px rgba(245,245,245,0.75);
+  -webkit-box-shadow: 10px 10px 5px -7px rgba(245,245,245,0.75);
+  -moz-box-shadow: 10px 10px 5px -7px rgba(245,245,245,0.75);
+}
+
+.youtube-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5em;
+}

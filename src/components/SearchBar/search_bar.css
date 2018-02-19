@@ -1,0 +1,16 @@
+.search-wrapper {
+  position: absolute;
+  top: 16px; 
+  left: 13%;
+} 
+
+.search-bar {
+  width: 600px;
+  height: 31px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  line-height: 24px;
+  border-radius: 3px;
+  font-size: 16px;
+}
