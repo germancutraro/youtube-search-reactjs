@@ -4,7 +4,7 @@
 
 <img src="youtube-clone.gif" alt="germancutraro-youtube-app" />
 
-## Instalation
+## Installation
 
 Install all dependencies
 
