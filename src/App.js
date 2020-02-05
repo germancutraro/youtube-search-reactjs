@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 // Components
@@ -10,33 +10,33 @@ import './App.css';
 // Personal Key, it would be hidden for you. Get One!
 import API_KEY from './key';
 
-class App extends Component {
-  state = {
-    videos: [],
-    selectedVideo: null
-  };
+function App() {
+  const [videos, setVideos] = useState(),
+    [selectedVideo, setSelectVideo] = useState();
 
-  componentDidMount() {
-    this.searchVideoHandler('Guns and roses'); // for default will be guns and roses :>
-  }
+  const handleSearch = term =>
+    YTSearch({ key: API_KEY, term }, videos => {
+      setVideos(videos);
+      setSelectVideo(videos[0]);
+    });
 
-  searchVideoHandler = term => YTSearch({key: API_KEY, term}, videos => this.setState({videos, selectedVideo: videos[0]}));
+  useEffect(() => {
+    handleSearch('Guns and roses');
+  }, []);
 
-  render() {
-    return (
-      <div className="App">
-        <Nav> 
-          <SearchBar onSearchVideos={ _.debounce(this.searchVideoHandler, 433) } />
-        </Nav>
-        <VideoDetail videos={this.state.selectedVideo} > 
-          <VideoList 
-            videos={this.state.videos} 
-            onVideoSelect={selectedVideo => this.setState({selectedVideo})} 
-          /> 
-        </VideoDetail>
-      </div>
-    );
-  }
+  return (
+    <div className='App'>
+      <Nav>
+        <SearchBar onSearchVideos={_.debounce(handleSearch, 433)} />
+      </Nav>
+      <VideoDetail videos={selectedVideo}>
+        <VideoList
+          videos={videos}
+          onVideoSelect={selectedVideo => setSelectVideo(selectedVideo)}
+        />
+      </VideoDetail>
+    </div>
+  );
 }
 
 export default App;
