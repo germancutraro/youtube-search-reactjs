@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 // Components
 import SearchBar from './components/SearchBar/search_bar';
 import VideoList from './components/VideoList/video_list';
 import VideoDetail from './components/VideoDetail/video_detail';
 import Nav from './components/Nav/Nav';
-import './App.css';
+// css
+import styles from './App.module.css';
 // Personal Key, it would be hidden for you. Get One!
 import API_KEY from './key';
 
@@ -25,9 +25,9 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className={styles.app}>
       <Nav>
-        <SearchBar onSearchVideos={_.debounce(handleSearch, 433)} />
+        <SearchBar onSearchVideos={handleSearch} />
       </Nav>
       <VideoDetail videos={selectedVideo}>
         <VideoList
