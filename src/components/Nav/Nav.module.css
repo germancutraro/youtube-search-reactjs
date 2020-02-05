@@ -1,11 +1,11 @@
-.main-nav {
+.main_nav {
   display: flex;
   align-items: center;
   height: 60px;
   background-color: #232323;
 }
 
-.youtube-logo {
+.youtube_logo {
   margin-left: 5em;
 }
 
