@@ -1,16 +1,16 @@
 import React from 'react';
-import styles from './SearchBar.module.css';
+// styles
+import { SearchWrapper, Search } from './searchBarStyles';
 
 function SearchBar({ handleSearch }) {
   return (
-    <div className={styles.search_wrapper}>
-      <input
+    <SearchWrapper>
+      <Search
         type='search'
-        onChange={e => handleSearch(e.target.value)}
-        className={styles.search_bar}
         placeholder='Type for search...'
+        onChange={e => handleSearch(e.target.value)}
       />
-    </div>
+    </SearchWrapper>
   );
 }
 

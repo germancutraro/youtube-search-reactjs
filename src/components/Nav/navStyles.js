@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavContainer = styled.div`
+export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   height: 60px;
