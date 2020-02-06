@@ -36,7 +36,7 @@ module.exports = API_KEY;
 
 **germancutraro**
 
-made with @bauticutraro
+made with [@bauticutraro](https://github.com/bauticutraro)
 
 ## Idea
 
