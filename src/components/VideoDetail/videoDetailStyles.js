@@ -49,11 +49,6 @@ export const VideoDescription = styled.small`
   color: #e3e3e3;
 `;
 
-export const Thumbnail = styled.div`
-  border: none;
-  background-size: cover;
-`;
-
 export const Divider = styled.br``;
 
 export const Frame = styled.iframe`

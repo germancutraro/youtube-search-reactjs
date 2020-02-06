@@ -8,6 +8,10 @@ body {
   background-color: #000;
 }
 
+li {
+  list-style: none;
+}
+
 :root {
   box-sizing: border-box;
 }
