@@ -1,4 +1,4 @@
-# Youtube-clon-reactjs
+# Youtube-Search-Reactjs
 
 ▶️ A very humble search engine and YouTube video player, made with React.js 🎥
 
@@ -29,14 +29,15 @@ module.exports = API_KEY;
 ## Built With
 
 * React.js
-* Axios.js
-* Lodash.js
+* Styled Components
 * Youtube API V3 Data
 
 ## Author
 
 **germancutraro**
 
-## Why
+made with @bauticutraro
+
+## Idea
 
 * The idea was taken from Stephen Grider React.js course, then i tried to styled the app to make it more real like Youtube, so thanks to Stephen! 
