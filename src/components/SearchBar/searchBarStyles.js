@@ -2,11 +2,17 @@ import styled from 'styled-components';
 
 export const SearchWrapper = styled.div`
   margin-left: 4.5em;
+
+  @media screen and (max-width: 957px) {
+    margin-left: 2em;
+  }
+
   @media screen and (max-width: 500px) {
     width: 100%;
     margin-left: 0.5em;
   }
 `;
+
 export const Search = styled.input`
   width: 600px;
   height: 31px;
@@ -19,7 +25,7 @@ export const Search = styled.input`
   border-radius: 3px;
   font-size: 16px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 957px) {
     width: 94%;
   }
 `;

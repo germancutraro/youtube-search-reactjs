@@ -3,7 +3,7 @@ import YTSearch from 'youtube-api-search';
 // Components
 import SearchBar from './components/SearchBar/SearchBar';
 import VideoList from './components/VideoList/video_list';
-import VideoDetail from './components/VideoDetail/video_detail';
+import VideoDetail from './components/VideoDetail/VideoDetail';
 import Nav from './components/Nav/Nav';
 // css
 import styles from './App.module.css';
@@ -11,7 +11,7 @@ import styles from './App.module.css';
 import API_KEY from './key';
 
 function App() {
-  const [videos, setVideos] = useState(),
+  const [videos, setVideos] = useState(null),
     [selectedVideo, setSelectVideo] = useState();
 
   const handleSearch = term =>
