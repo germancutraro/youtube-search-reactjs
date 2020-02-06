@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import YTSearch from 'youtube-api-search';
 // Components
-import SearchBar from './components/SearchBar/search_bar';
+import SearchBar from './components/SearchBar/SearchBar';
 import VideoList from './components/VideoList/video_list';
 import VideoDetail from './components/VideoDetail/video_detail';
 import Nav from './components/Nav/Nav';
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Nav>
-        <SearchBar onSearchVideos={handleSearch} />
+        <SearchBar handleSearch={handleSearch} />
       </Nav>
       <VideoDetail videos={selectedVideo}>
         <VideoList
