@@ -8,17 +8,14 @@ import {
 } from './videoStyles';
 
 const VideoListItem = props => {
-  const videoData = {
-    title: props.snippet.title,
-    img: props.snippet.thumbnails.default.url,
-    channel: props.snippet.channelTitle
-  };
+  const { title, thumbnails, channelTitle } = props.snippet;
+
   return (
-    <Item onClick={() => props.onVideoSelect(props)}>
-      <Thumbnail src={videoData.img} alt={videoData.title} />
+    <Item onClick={() => props.handleSelectVideo(props)}>
+      <Thumbnail src={thumbnails.default.url} alt={title} />
       <ItemWrapper>
-        <ItemTitle>{videoData.title}</ItemTitle>
-        <ItemChannel>{videoData.channel}</ItemChannel>
+        <ItemTitle>{title}</ItemTitle>
+        <ItemChannel>{channelTitle}</ItemChannel>
       </ItemWrapper>
     </Item>
   );

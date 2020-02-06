@@ -3,9 +3,13 @@ import VideoItem from './VideoItem';
 // styles
 import { ListContainer } from './videoStyles';
 
-function VideoList({ videos, onVideoSelect }) {
+function VideoList({ videos, handleSelectVideo }) {
   const list = videos.map(video => (
-    <VideoItem key={video.etag} onVideoSelect={onVideoSelect} {...video} />
+    <VideoItem
+      key={video.etag}
+      handleSelectVideo={handleSelectVideo}
+      {...video}
+    />
   ));
   return <ListContainer>{list}</ListContainer>;
 }

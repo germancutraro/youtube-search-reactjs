@@ -32,7 +32,7 @@ function App() {
       <VideoDetail videos={selectedVideo}>
         <VideoList
           videos={videos}
-          onVideoSelect={selectedVideo => setSelectVideo(selectedVideo)}
+          handleSelectVideo={selectedVideo => setSelectVideo(selectedVideo)}
         />
       </VideoDetail>
     </Container>
